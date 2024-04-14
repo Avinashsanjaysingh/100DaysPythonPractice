@@ -1,0 +1,10 @@
+m = int(input("Enter the first number : "))
+n = int(input("Enter the second Number : "))
+
+print(f"The sum of {m} and {n} is {m+n}.")
+print(f"The difference of {m} and {n} is {m-n}.")
+print(f"The product of {m} and {n} is {m*n}.")
+print(f"The exponential of {m} and {n} is {m**n}.")
+print(f"The division of {m} and {n} is {m/n}.")
+print(f"The modulus of {m} and {n} is {m%n}.")
+print(f"The floor division of {m} and {n} is {m//n}.")
