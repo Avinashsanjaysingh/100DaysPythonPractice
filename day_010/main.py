@@ -9,3 +9,4 @@ print(x  + y)
 
 print(int(x) + int(y))
 
+print(float(x) + int(y))
