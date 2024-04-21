@@ -4,7 +4,7 @@ In python, anything that you enclose between single or double quotation marks is
 
 Example
 
-name = "Harry"
+name = "harry"
 print("Hello, " + name)
 
 Output
@@ -45,3 +45,5 @@ for character in name:
     print(character)
 
 Above code prints all the characters in the string name one by one!
+
+
