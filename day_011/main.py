@@ -1,12 +1,12 @@
 
 
-name = "Harry"
-friend = "Rohan"
-anotherFriend = 'Lovish'
+name = "Avinash"
+friend = "Somya"
+anotherFriend = 'Adarsh'
 apple = '''He said, 
-Hi Harry
+Hi Avinash
 hey I am good
-"I want to eat an apple'''
+"I want to eat an apple".'''
  
 print("Hello, " + name)
 # print(apple) 
@@ -15,7 +15,9 @@ print(name[1])
 print(name[2])
 print(name[3])
 print(name[4])
-# print(name[5]) # Throws an error
+print(name[5])
+print(name[6])
+# print(name[7]) # Throws an error
 print("Lets use a for loop\n")
 for character in apple:
     print(character)

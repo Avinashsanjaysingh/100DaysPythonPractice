@@ -4,7 +4,7 @@ In python, anything that you enclose between single or double quotation marks is
 
 Example
 
-name = "harry"
+name = "Avinash"
 print("Hello, " + name)
 
 Output
