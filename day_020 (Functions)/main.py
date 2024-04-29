@@ -26,4 +26,6 @@ calculateGmean(c, d)
 # gmean2 = (c*d)/(c+d)
 # print(gmean2)
 
+# day 20 completed
+
 
