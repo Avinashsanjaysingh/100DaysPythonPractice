@@ -13,17 +13,17 @@ def average(*numbers):
   return sum / len(numbers)
 
 
-# average(4, 6)
+print(average(4, 6))
 # average(b=9)
 
 c = average(5, 6, 7, 1)
-print(c)
+# print(c)
 
 
-# def name(**name):
-#   # print(type(name))
-#   print("Hello,", name["fname"], name["mname"], name["lname"])
+def name(**name):
+  # print(type(name))
+  print("Hello,", name["fname"], name["mname"], name["lname"])
 
 
-# name(mname="Buchanan", lname="Barnes", fname="James")
+name(mname="", lname="Singh", fname="Avinash")
 
