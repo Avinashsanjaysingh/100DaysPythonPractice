@@ -3,6 +3,8 @@ String formatting in python
 
 String formatting can be done in python using the format method.
 
+fstring was introduced in python 3.6 onwards.
+
 txt = "For only {price:.2f} dollars!"
 print(txt.format(price = 49))
 f-strings in python
