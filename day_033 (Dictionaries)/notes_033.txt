@@ -7,9 +7,11 @@ Example:
 
 info = {'name':'Karan', 'age':19, 'eligible':True}
 print(info)
-Output:
 
+Output:
 {'name': 'Karan', 'age': 19, 'eligible': True}
+
+
 Accessing Dictionary items:
 
 I. Accessing single values:
@@ -21,10 +23,11 @@ Example:
 info = {'name':'Karan', 'age':19, 'eligible':True}
 print(info['name'])
 print(info.get('eligible'))
-Output:
 
+Output:
 Karan
 True
+
 II. Accessing multiple values:
 
 We can print all the values in the dictionary using values() method.
@@ -33,9 +36,10 @@ Example:
 
 info = {'name':'Karan', 'age':19, 'eligible':True}
 print(info.values())
-Output:
 
+Output:
 dict_values(['Karan', 19, True])
+
 III. Accessing keys:
 
 We can print all the keys in the dictionary using keys() method.
@@ -44,9 +48,10 @@ Example:
 
 info = {'name':'Karan', 'age':19, 'eligible':True}
 print(info.keys())
-Output:
 
+Output:
 dict_keys(['name', 'age', 'eligible'])
+
 IV. Accessing key-value pairs:
 
 We can print all the key-value pairs in the dictionary using items() method.
@@ -55,6 +60,6 @@ Example:
 
 info = {'name':'Karan', 'age':19, 'eligible':True}
 print(info.items())
-Output:
 
+Output:
 dict_items([('name', 'Karan'), ('age', 19), ('eligible', True)])
