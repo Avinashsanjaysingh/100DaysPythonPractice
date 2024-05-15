@@ -1,4 +1,11 @@
 
+'''
+for counter in sequence:
+    #Statements inside for loop block
+else:
+    #Statements inside else block
+'''
+
 i = 0
 while i<7:
   print(i)
@@ -14,3 +21,4 @@ for x in range(5):
 else:
     print ("else block in loop")
 print ("Out of loop")
+
