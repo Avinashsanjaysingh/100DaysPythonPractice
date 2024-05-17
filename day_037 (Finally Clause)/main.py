@@ -16,3 +16,38 @@ def func1():
 
 x = func1()
 print(x)
+
+
+# Syntax:
+'''
+try:
+   #statements which could generate 
+   #exception
+except:
+   #solution of generated exception
+finally:
+    #block of code which is going to 
+    #execute in any situation
+'''
+
+
+try:
+    num = int(input("Enter an integer: "))
+except ValueError:
+    print("Number entered is not an integer.")
+else:
+    print("Integer Accepted.")
+finally:
+    print("This block is always executed.")
+
+'''
+# output1:
+Enter an integer: 19
+Integer Accepted.
+This block is always executed.
+
+# output2:
+Enter an integer: 19
+Integer Accepted.
+This block is always executed.
+'''
