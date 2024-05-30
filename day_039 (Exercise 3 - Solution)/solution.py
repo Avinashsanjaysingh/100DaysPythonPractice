@@ -33,19 +33,22 @@ for i in range(len(questions)):
     print(f"{question[0]}\na. {question[1]}\tb. {question[2]}\nc. {question[3]}\td. {question[4]}\n")
 
     answer = input("Enter your answer (a, b, c, d) or 'q' to quit.\n")
-    while not (answer == 'a' or answer == 'b' or answer == 'c' or answer == 'd' or answer == 'q'):
+    # while not (answer == 'a' or answer == 'b' or answer == 'c' or answer == 'd' or answer == 'q'):
+    #     answer = input("Please enter only from the given options \nEnter your answer (a, b, c, d) or 'q' to quit.\n")
+    while answer not in ['a','b','c','d','q']:
         answer = input("Please enter only from the given options \nEnter your answer (a, b, c, d) or 'q' to quit.\n")
 
     if answer == question[-1]:
         print(f"\nCorrect answer. \nYou win {amount[i]}")
     elif answer == 'q':
-        print(f"\nYou win {amount[i-1]}")
+        if i == 0:
+            print(f"\nYou win nothing.")
+        else:
+            print(f"\nYou win {amount[i-1]}")
         break
     else:
         print("Wrong answer! \nYou win nothing")
         break
-
-
 
 
 
