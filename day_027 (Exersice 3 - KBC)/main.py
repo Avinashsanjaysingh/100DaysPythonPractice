@@ -1,59 +1,45 @@
-
 # Create a program capable of displaying questions to the user like KBC. Use List data type to store the questions and their correct answers. Display the final amount the person is taking home after playing the game.
 
-
-def KBC():
-
-    pass
-
-
-print("Welcome to the game kaun banega crorepati\n")
-
-import random
-
-# Define the questions and their corresponding answers using a list of tuples
 questions = [
-    ("What is the capital of France?", "Paris"),
-    ("Who wrote 'Romeo and Juliet'?", "William Shakespeare"),
-    ("What is the chemical symbol for water?", "H2O"),
-    ("What is the largest planet in our solar system?", "Jupiter"),
-    ("What is the powerhouse of the cell?", "Mitochondria")
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
+  ["Which language was used to create fb ?", "Python", "French", "JavaScript", "Php", "d"],
 ]
 
-# Function to display a question and get user's answer
-def ask_question(question, correct_answer):
-    print(question)
-    user_answer = input("Your answer: ")
-    return user_answer.lower() == correct_answer.lower()
+amount = ['1,000', '2,000', '3,000', '5,000', '10,000', '20,000', '40,000', '80,000', '1,60,000', '3,20,000', '6,40,000', '12,50,000', '25,00,000', '50,00,000', '75,00,000', '1 Crore', '7.5 Crore']
 
-# Function to play the quiz game
-def play_game():
-    total_questions = len(questions)
-    correct_answers = 0
+welcome = input("\nWelcome to Kon Banega Crorepati !\n(press Enter to start the game)")
 
-    # Shuffle the questions to make the game more random
-    random.shuffle(questions)
+for i in range(len(questions)):
 
-    # Loop through each question
-    for i, (question, correct_answer) in enumerate(questions, 1):
-        print(f"\nQuestion {i}/{total_questions}:")
-        if ask_question(question, correct_answer):
-            print("Correct!")
-            correct_answers += 1
-        else:
-            print(f"Sorry, the correct answer was {correct_answer}")
+    question = questions[i]
 
-    # Calculate the amount won based on the number of correct answers
-    prize_money = 1000 * correct_answers
+    print(f"\nQustion no. {i+1} for the amount of {amount[i]}\n")
+    print(f"{question[0]}\na. {question[1]}\tb. {question[2]}\nc. {question[3]}\td. {question[4]}\n")
 
-    print(f"\nCongratulations! You answered {correct_answers} questions correctly.")
-    print(f"You are taking home ${prize_money}.")
+    answer = input("Enter your answer (a, b, c, d) or 'q' to quit.\n")
+    while not (answer == 'a' or answer == 'b' or answer == 'c' or answer == 'd' or answer == 'q'):
+        answer = input("Please enter only from the given options \nEnter your answer (a, b, c, d) or 'q' to quit.\n")
 
-# Main function to start the program
-def main():
-    print("Welcome to the KBC quiz game!")
-    play_game()
-
-if __name__ == "__main__":
-    main()
-
+    if answer == question[-1]:
+        print(f"\nCorrect answer. \nYou win {amount[i]}")
+    elif answer == 'q':
+        print(f"\nYou win {amount[i-1]}")
+        break
+    else:
+        print("Wrong answer! \nYou win nothing")
+        break
