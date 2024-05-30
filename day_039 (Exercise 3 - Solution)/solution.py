@@ -23,7 +23,16 @@ questions = [
 
 amount = ['1,000', '2,000', '3,000', '5,000', '10,000', '20,000', '40,000', '80,000', '1,60,000', '3,20,000', '6,40,000', '12,50,000', '25,00,000', '50,00,000', '75,00,000', '1 Crore', '7.5 Crore']
 
+
+levelText = "There are 17 levels of the game \n\nlevel 1: 1,000 \nlevel 2: 2,000 \nlevel 3: 3,000 \nlevel 4: 5,000 \nlevel 5: 10,000 \nlevel 6: 20,000 \nlevel 7: 40,000 \nlevel 8: 80,000 \nlevel 9: 1,60,000 \nlevel 10: 3,20,000 \nlevel 11: 6,40,000 \nlevel 12: 12,50,000 \nlevel 13: 25,00,000 \nlevel 14: 50,00,000 \nlevel 15: 75,00,000 \nlevel 16: 1 Crore \nlevel 17: 7.5 Crore"
+
 welcome = input("\nWelcome to Kon Banega Crorepati !\n(press Enter to start the game)")
+level = (input(f"{levelText} \n\nPlease select your intelligence level between 10-17: "))
+
+while (level) not in ['10','11','12','13','14','15','16','17']:
+    level = (input("Please select the level between 10-17: "))
+
+level = int(level)
 
 for i in range(len(questions)):
 
@@ -41,13 +50,17 @@ for i in range(len(questions)):
     if answer == question[-1]:
         print(f"\nCorrect answer. \nYou win {amount[i]}")
     elif answer == 'q':
-        if i == 0:
+        if (i <= level):
             print(f"\nYou win nothing.")
-        else:
-            print(f"\nYou win {amount[i-1]}")
+        elif i >= 10:
+            print(f"You win {amount[i-1]}")
         break
     else:
-        print("Wrong answer! \nYou win nothing")
+        if (i <= level):
+            print("Wrong answer! \nYou win nothing")
+        if i >= level:
+            print(f"You win {amount[level]}")
+            break
         break
 
 
